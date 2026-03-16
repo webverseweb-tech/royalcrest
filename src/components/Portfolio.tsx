@@ -1,17 +1,17 @@
 import portfolioConstructionImg from "@/assets/portfolio-construction.jpg";
-import realestateImg from "@/assets/realestate.jpg";
-import solarImg from "@/assets/solar.jpg";
-import kitchenImg from "@/assets/kitchen.jpg";
-import acImg from "@/assets/ac.jpg";
-import consultancyImg from "@/assets/consultancy.jpg";
+import portfolioRealestateImg from "@/assets/portfolio-realestate.jpg";
+import portfolioSolarImg from "@/assets/portfolio-solar.png";
+import portfolioKitchenImg from "@/assets/portfolio-kitchen.jpg";
+import portfolioAcImg from "@/assets/portfolio-ac.png";
+import portfolioConsultancyImg from "@/assets/portfolio-consultancy.jpg";
 
 const projects = [
   { img: portfolioConstructionImg, category: "Construction", title: "Modern Residential Complex", desc: "Contemporary multi-unit complex with glass railings and premium finishes." },
-  { img: realestateImg, category: "Real Estate", title: "Luxury Property", desc: "Breathtaking Trinidad property at night with manicured grounds." },
-  { img: solarImg, category: "Renewable Energy", title: "Rooftop Solar Installation", desc: "Residential rooftop solar providing clean energy year-round." },
-  { img: kitchenImg, category: "Property Management", title: "Premium Kitchen Renovation", desc: "Full kitchen overhaul with grey cabinetry and black granite counters." },
-  { img: acImg, category: "Air Conditioning", title: "Commercial HVAC Installation", desc: "Full HVAC system for a commercial office building in Port of Spain." },
-  { img: consultancyImg, category: "Consultancy", title: "Professional Floor Plan Design", desc: "First floor layout for a medical office complex in Port of Spain." },
+  { img: portfolioRealestateImg, category: "Real Estate", title: "Luxury Property", desc: "Breathtaking Trinidad property at night with manicured grounds." },
+  { img: portfolioSolarImg, category: "Renewable Energy", title: "Rooftop Solar Installation", desc: "Residential rooftop solar providing clean energy year-round." },
+  { img: portfolioKitchenImg, category: "Property Management", title: "Premium Kitchen Renovation", desc: "Full kitchen overhaul with grey cabinetry and black granite counters." },
+  { img: portfolioAcImg, category: "Air Conditioning", title: "Commercial HVAC Installation", desc: "Full HVAC system for a commercial office building in Port of Spain." },
+  { img: portfolioConsultancyImg, category: "Consultancy", title: "Professional Floor Plan Design", desc: "First floor layout for a medical office complex in Port of Spain." },
 ];
 
 const Portfolio = () => {
