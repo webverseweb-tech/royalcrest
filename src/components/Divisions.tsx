@@ -224,9 +224,9 @@ const Divisions = () => {
                 <Phone size={18} className="text-primary" />
                 <a
 
-                className="hover:text-primary transition-colors font-semibold" href="tel:+18682676527">
+                className="hover:text-primary transition-colors font-semibold" href="tel:+18683332665">
                 
-                  +1 (868) 267-6527  
+                  +1 (868) 3332665    
                 </a>
               </div>
 
