@@ -226,7 +226,7 @@ const Divisions = () => {
                 href="tel:+18682749675"
                 className="hover:text-primary transition-colors font-semibold">
                 
-                  +1 (868) 274-9675 
+                  +1 (868) 267-6527  
                 </a>
               </div>
 
