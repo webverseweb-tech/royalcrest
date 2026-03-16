@@ -26,29 +26,31 @@ const Navbar = () => {
         scrolled ? "bg-background/95 backdrop-blur-md shadow-lg" : "bg-transparent"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-16 md:h-20">
-        <a href="#home" className="flex items-center gap-3">
-          <img src={logo} alt="Royal Crest" className="h-10 w-10 object-contain" />
+      <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-20 md:h-24">
+        <a href="#home" className="flex items-center gap-4">
+          <div className="h-14 w-14 rounded-full border-2 border-primary/40 bg-background/50 backdrop-blur-sm flex items-center justify-center overflow-hidden p-1.5">
+            <img src={logo} alt="Royal Crest" className="h-full w-full object-contain" />
+          </div>
           <div className="leading-tight">
-            <span className="block text-sm font-bold tracking-wide text-foreground">ROYAL CREST</span>
-            <span className="block text-[10px] tracking-[0.15em] text-muted-foreground">INDUSTRIES LIMITED</span>
+            <span className="block text-base font-bold tracking-wide text-foreground">ROYAL CREST</span>
+            <span className="block text-xs tracking-[0.15em] text-muted-foreground">INDUSTRIES LIMITED</span>
           </div>
         </a>
 
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex items-center gap-10">
           {navItems.map((item) => (
-            <a key={item.href} href={item.href} className="nav-link">
+            <a key={item.href} href={item.href} className="nav-link text-base">
               {item.label}
             </a>
           ))}
         </div>
 
-        <div className="hidden md:flex items-center gap-4">
-          <a href="tel:+18682749675" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors">
-            <Phone size={14} />
+        <div className="hidden md:flex items-center gap-5">
+          <a href="tel:+18682749675" className="flex items-center gap-2 text-base text-muted-foreground hover:text-primary transition-colors">
+            <Phone size={16} />
             +1 (868) 274-9675
           </a>
-          <a href="#contact" className="gold-button text-xs py-2 px-5">
+          <a href="#contact" className="gold-button py-3 px-7">
             GET IN TOUCH
           </a>
         </div>
@@ -57,24 +59,24 @@ const Navbar = () => {
           className="md:hidden text-foreground"
           onClick={() => setMobileOpen(!mobileOpen)}
         >
-          {mobileOpen ? <X size={24} /> : <Menu size={24} />}
+          {mobileOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
       </div>
 
       {mobileOpen && (
         <div className="md:hidden bg-background/95 backdrop-blur-md border-t border-border">
-          <div className="px-6 py-4 flex flex-col gap-4">
+          <div className="px-6 py-6 flex flex-col gap-5">
             {navItems.map((item) => (
               <a
                 key={item.href}
                 href={item.href}
-                className="nav-link py-2"
+                className="nav-link text-lg py-2"
                 onClick={() => setMobileOpen(false)}
               >
                 {item.label}
               </a>
             ))}
-            <a href="#contact" className="gold-button text-xs mt-2" onClick={() => setMobileOpen(false)}>
+            <a href="#contact" className="gold-button mt-2" onClick={() => setMobileOpen(false)}>
               GET IN TOUCH
             </a>
           </div>

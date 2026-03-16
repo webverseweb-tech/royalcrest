@@ -1,67 +1,46 @@
 import logo from "@/assets/logo.png";
-import portfolioRealestateImg from "@/assets/portfolio-realestate.jpg";
-import portfolioSolarImg from "@/assets/portfolio-solar.png";
-import portfolioConstructionImg from "@/assets/portfolio-construction.jpg";
+import constructionImg from "@/assets/portfolio-construction.jpg";
 
 const Hero = () => {
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Video Background */}
+      {/* Construction Image Background */}
       <div className="absolute inset-0">
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
+        <img
+          src={constructionImg}
+          alt="Royal Crest Construction"
           className="w-full h-full object-cover"
-        >
-          <source src="https://comfy-tarsier-fd37a9.netlify.app/hero-video.mp4" type="video/mp4" />
-        </video>
-        <div className="absolute inset-0 bg-background/80" />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-transparent to-background" />
+        />
+        <div className="absolute inset-0 bg-background/75" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/40 to-background" />
       </div>
-
-      {/* Floating images decorations */}
-      <img
-        src={portfolioConstructionImg}
-        alt=""
-        className="hidden lg:block absolute top-32 left-8 w-44 h-28 object-cover rounded-xl opacity-20 blur-[1px]"
-      />
-      <img
-        src={portfolioSolarImg}
-        alt=""
-        className="hidden lg:block absolute bottom-40 right-8 w-40 h-28 object-cover rounded-xl opacity-15 blur-[1px]"
-      />
-      <img
-        src={portfolioRealestateImg}
-        alt=""
-        className="hidden lg:block absolute top-48 right-16 w-36 h-24 object-cover rounded-xl opacity-15 blur-[1px]"
-      />
 
       {/* Content */}
       <div className="relative z-10 text-center px-6 max-w-5xl mx-auto">
-        {/* Logo */}
-        <img src={logo} alt="Royal Crest" className="h-24 md:h-32 w-auto mx-auto mb-8 drop-shadow-2xl" />
+        {/* Circular Logo */}
+        <div className="mx-auto mb-10 h-36 w-36 md:h-44 md:w-44 rounded-full border-4 border-primary/40 bg-background/60 backdrop-blur-md flex items-center justify-center p-4 shadow-2xl shadow-primary/10">
+          <img src={logo} alt="Royal Crest" className="h-full w-full object-contain" />
+        </div>
 
-        <div className="section-eyebrow mb-8 justify-center">Trinidad &amp; Tobago Conglomerate</div>
+        <div className="section-eyebrow mb-10 justify-center text-base">Trinidad &amp; Tobago Conglomerate</div>
 
-        <h1 className="font-display mb-8">
-          <span className="block text-5xl md:text-7xl lg:text-[5.5rem] font-light text-foreground">Royal Crest</span>
-          <span className="block text-5xl md:text-7xl lg:text-[5.5rem] italic text-primary font-bold">Industries</span>
-          <span className="block text-4xl md:text-5xl lg:text-6xl font-light text-foreground mt-3">Limited</span>
+        <h1 className="font-display mb-10">
+          <span className="block text-6xl md:text-8xl lg:text-9xl font-light text-foreground">Royal Crest</span>
+          <span className="block text-6xl md:text-8xl lg:text-9xl italic text-primary font-bold">Industries</span>
+          <span className="block text-5xl md:text-6xl lg:text-7xl font-light text-foreground mt-4">Limited</span>
         </h1>
 
-        <p className="text-muted-foreground text-lg md:text-xl mb-8 max-w-2xl mx-auto leading-relaxed">
+        <p className="text-muted-foreground text-xl md:text-2xl mb-10 max-w-3xl mx-auto leading-relaxed">
           A Trinidad &amp; Tobago Conglomerate — Built on Excellence, Driven by Vision
         </p>
 
-        <div className="w-20 h-0.5 bg-primary/50 mx-auto mb-10" />
+        <div className="w-24 h-1 bg-primary/50 mx-auto mb-12 rounded-full" />
 
-        <div className="flex flex-col sm:flex-row gap-5 justify-center">
-          <a href="#divisions" className="gold-button text-base">
+        <div className="flex flex-col sm:flex-row gap-6 justify-center">
+          <a href="#divisions" className="gold-button text-lg px-12 py-5">
             Explore Our Divisions ›
           </a>
-          <a href="#contact" className="ghost-button text-base">
+          <a href="#contact" className="ghost-button text-lg px-12 py-5">
             Contact Us
           </a>
         </div>
@@ -70,10 +49,10 @@ const Hero = () => {
       {/* Scroll indicator */}
       <a
         href="#about"
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
+        className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3 text-muted-foreground hover:text-primary transition-colors"
       >
         <span className="text-sm tracking-[0.2em] uppercase">Scroll</span>
-        <span className="animate-bounce-slow text-xl">↓</span>
+        <span className="animate-bounce-slow text-2xl">↓</span>
       </a>
     </section>
   );
