@@ -226,7 +226,7 @@ const Divisions = () => {
 
                 className="hover:text-primary transition-colors font-semibold" href="tel:+18683332665">
                 
-                  +1 (868) 3332665    
+                  +1 (868) 333-2665    
                 </a>
               </div>
 
