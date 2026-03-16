@@ -147,9 +147,9 @@ const Divisions = () => {
                   <a
 
                   className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
-                  onClick={(e) => e.stopPropagation()} href="tel:+186 274-9675">
-                  
-                    <Phone size={14} /> 274-9675
+                  onClick={(e) => e.stopPropagation()} href="tel:+186 274-9675"> 333-2665
+
+                  <Phone size={14} /> 274-9675
                   </a>
                   <button className="text-sm text-primary font-semibold hover:text-gold-light transition-colors">
                     Learn More →
