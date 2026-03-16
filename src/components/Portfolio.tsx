@@ -29,7 +29,7 @@ const Portfolio = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((p) => (
-            <div key={p.title} className="portfolio-card">
+            <div key={p.title} className="portfolio-card group">
               <div className="relative h-64 overflow-hidden rounded-lg">
                 <img
                   src={p.img}

@@ -36,7 +36,7 @@ const Divisions = () => {
           {divisions.map((d, i) => (
             <div
               key={d.num}
-              className="division-card cursor-pointer"
+              className="division-card group cursor-pointer"
               onClick={() => setSelected(i)}
             >
               <div className="relative h-48 overflow-hidden">
