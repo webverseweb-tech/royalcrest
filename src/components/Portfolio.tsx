@@ -16,34 +16,34 @@ const projects = [
 
 const Portfolio = () => {
   return (
-    <section id="portfolio" className="py-24 md:py-32 bg-secondary/30">
+    <section id="portfolio" className="py-28 md:py-36 bg-secondary/30">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-16">
+        <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-20">
           <div>
-            <div className="section-eyebrow mb-5">Portfolio</div>
-            <h2 className="section-heading mb-3">Our Work</h2>
-            <p className="section-subheading">Completed projects across our seven divisions.</p>
+            <div className="section-eyebrow mb-6">Portfolio</div>
+            <h2 className="section-heading mb-4">Our Work</h2>
+            <p className="section-subheading text-lg">Completed projects across our seven divisions.</p>
           </div>
-          <a href="#contact" className="gold-button mt-6 md:mt-0 text-xs">View All ›</a>
+          <a href="#contact" className="gold-button mt-6 md:mt-0">View All ›</a>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((p) => (
             <div key={p.title} className="portfolio-card group">
-              <div className="relative h-64 overflow-hidden rounded-lg">
+              <div className="relative h-72 overflow-hidden rounded-xl">
                 <img
                   src={p.img}
                   alt={p.title}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background via-background/30 to-transparent opacity-60 group-hover:opacity-80 transition-opacity" />
-                <div className="absolute bottom-0 left-0 right-0 p-5">
-                  <div className="flex items-center gap-2 mb-2">
-                    <span className="text-xs font-semibold text-primary tracking-wider uppercase">{p.category}</span>
-                    <span className="text-primary text-sm">→</span>
+                <div className="absolute bottom-0 left-0 right-0 p-6">
+                  <div className="flex items-center gap-2 mb-3">
+                    <span className="text-sm font-semibold text-primary tracking-wider uppercase">{p.category}</span>
+                    <span className="text-primary text-base">→</span>
                   </div>
-                  <h3 className="font-display text-lg font-bold text-foreground">{p.title}</h3>
-                  <p className="text-xs text-muted-foreground mt-1">{p.desc}</p>
+                  <h3 className="font-display text-xl font-bold text-foreground">{p.title}</h3>
+                  <p className="text-sm text-muted-foreground mt-2">{p.desc}</p>
                 </div>
               </div>
             </div>

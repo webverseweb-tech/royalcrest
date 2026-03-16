@@ -21,27 +21,27 @@ const testimonials = [
 
 const Testimonials = () => {
   return (
-    <section className="py-24 md:py-32 relative">
+    <section className="py-28 md:py-36 relative">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-16">
-          <div className="section-eyebrow justify-center mb-5">Client Voices</div>
+        <div className="text-center mb-20">
+          <div className="section-eyebrow justify-center mb-6">Client Voices</div>
           <h2 className="section-heading">What Our Clients Say</h2>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-3 gap-8">
           {testimonials.map((t) => (
             <div key={t.name} className="testimonial-card">
-              <span className="text-4xl text-primary font-display">"</span>
-              <div className="flex gap-1 mb-4">
+              <span className="text-5xl text-primary font-display leading-none">"</span>
+              <div className="flex gap-1 mb-5 mt-2">
                 {[...Array(5)].map((_, i) => (
-                  <span key={i} className="text-primary text-sm">★</span>
+                  <span key={i} className="text-primary text-base">★</span>
                 ))}
               </div>
-              <p className="text-sm text-muted-foreground leading-relaxed mb-6">{t.text}</p>
+              <p className="text-base text-muted-foreground leading-relaxed mb-8">{t.text}</p>
               <div>
-                <p className="font-semibold text-foreground text-sm">{t.name}</p>
-                <p className="text-xs text-muted-foreground">{t.role}</p>
-                <p className="text-xs text-primary mt-1">{t.division}</p>
+                <p className="font-bold text-foreground text-base">{t.name}</p>
+                <p className="text-sm text-muted-foreground mt-1">{t.role}</p>
+                <p className="text-sm text-primary mt-2 font-semibold">{t.division}</p>
               </div>
             </div>
           ))}

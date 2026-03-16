@@ -7,19 +7,19 @@ const features = [
 
 const WhyChoose = () => {
   return (
-    <section className="py-24 md:py-32">
+    <section className="py-28 md:py-36">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-16">
-          <div className="section-eyebrow justify-center mb-5">Our Promise</div>
+        <div className="text-center mb-20">
+          <div className="section-eyebrow justify-center mb-6">Our Promise</div>
           <h2 className="section-heading">Why Choose Royal Crest?</h2>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {features.map((f) => (
             <div key={f.title} className="why-card text-center">
-              <span className="text-3xl mb-4 block">{f.icon}</span>
-              <h3 className="font-display text-lg font-bold text-foreground mb-3">{f.title}</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">{f.desc}</p>
+              <span className="text-5xl mb-6 block">{f.icon}</span>
+              <h3 className="font-display text-xl font-bold text-foreground mb-4">{f.title}</h3>
+              <p className="text-base text-muted-foreground leading-relaxed">{f.desc}</p>
             </div>
           ))}
         </div>
