@@ -1,10 +1,11 @@
 import { useState } from "react";
-import { Phone, Mail, MessageCircle, MapPin } from "lucide-react";
+import { Phone, Mail, MessageCircle, MapPin, Send } from "lucide-react";
 
 const contactInfo = [
   { icon: Phone, label: "Mobile", value: "+1 (868) 274-9675", href: "tel:+18682749675" },
   { icon: Mail, label: "Email", value: "info@royalcrest.co.tt", href: "mailto:info@royalcrest.co.tt" },
   { icon: MessageCircle, label: "WhatsApp", value: "+1 868-274-9675", href: "https://wa.me/18682749675" },
+  { icon: Send, label: "Messenger", value: "Royal Crest Industries Ltd.", href: "https://m.me/royalcrestindustries" },
   { icon: MapPin, label: "Location", value: "Trinidad & Tobago", href: "#" },
 ];
 
@@ -23,20 +24,20 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-24 md:py-32 bg-secondary/30">
+    <section id="contact" className="py-28 md:py-36 bg-secondary/30">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-16">
-          <div className="section-eyebrow justify-center mb-5">Get in Touch</div>
+        <div className="text-center mb-20">
+          <div className="section-eyebrow justify-center mb-6">Get in Touch</div>
           <h2 className="section-heading">Contact Royal Crest</h2>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid lg:grid-cols-2 gap-16">
           {/* Form */}
-          <div>
-            <h3 className="font-display text-xl font-bold text-foreground mb-6">Send Us a Message</h3>
-            <form onSubmit={handleSubmit} className="space-y-4">
+          <div className="bg-card border border-border rounded-xl p-8 md:p-10">
+            <h3 className="font-display text-2xl font-bold text-foreground mb-8">Send Us a Message</h3>
+            <form onSubmit={handleSubmit} className="space-y-5">
               <div>
-                <label className="text-xs text-muted-foreground mb-1 block">Name *</label>
+                <label className="text-sm font-semibold text-muted-foreground mb-2 block">Name *</label>
                 <input
                   type="text"
                   required
@@ -46,7 +47,7 @@ const Contact = () => {
                 />
               </div>
               <div>
-                <label className="text-xs text-muted-foreground mb-1 block">Email *</label>
+                <label className="text-sm font-semibold text-muted-foreground mb-2 block">Email *</label>
                 <input
                   type="email"
                   required
@@ -56,7 +57,7 @@ const Contact = () => {
                 />
               </div>
               <div>
-                <label className="text-xs text-muted-foreground mb-1 block">Division *</label>
+                <label className="text-sm font-semibold text-muted-foreground mb-2 block">Division *</label>
                 <select
                   required
                   className="contact-input"
@@ -70,15 +71,15 @@ const Contact = () => {
                 </select>
               </div>
               <div>
-                <label className="text-xs text-muted-foreground mb-1 block">Message</label>
+                <label className="text-sm font-semibold text-muted-foreground mb-2 block">Message</label>
                 <textarea
-                  rows={4}
+                  rows={5}
                   className="contact-input resize-none"
                   value={form.message}
                   onChange={(e) => setForm({ ...form, message: e.target.value })}
                 />
               </div>
-              <button type="submit" className="gold-button w-full">
+              <button type="submit" className="gold-button w-full text-base">
                 Send Message →
               </button>
             </form>
@@ -86,24 +87,24 @@ const Contact = () => {
 
           {/* Contact details */}
           <div>
-            <h3 className="font-display text-xl font-bold text-foreground mb-2">Our Contact Details</h3>
-            <p className="text-sm text-muted-foreground mb-8">We respond within 24 hours.</p>
+            <h3 className="font-display text-2xl font-bold text-foreground mb-3">Our Contact Details</h3>
+            <p className="text-base text-muted-foreground mb-10">We respond within 24 hours.</p>
 
-            <div className="space-y-6">
+            <div className="space-y-8">
               {contactInfo.map((c) => (
                 <a
                   key={c.label}
                   href={c.href}
-                  className="flex items-start gap-4 group"
+                  className="flex items-start gap-5 group"
                   target={c.href.startsWith("http") ? "_blank" : undefined}
                   rel={c.href.startsWith("http") ? "noopener noreferrer" : undefined}
                 >
-                  <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0 group-hover:bg-primary/20 transition-colors">
-                    <c.icon size={16} className="text-primary" />
+                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0 group-hover:bg-primary/20 transition-colors">
+                    <c.icon size={20} className="text-primary" />
                   </div>
                   <div>
-                    <p className="text-xs text-muted-foreground">{c.label}</p>
-                    <p className="text-sm text-foreground group-hover:text-primary transition-colors">{c.value}</p>
+                    <p className="text-sm text-muted-foreground font-semibold">{c.label}</p>
+                    <p className="text-base text-foreground group-hover:text-primary transition-colors font-medium">{c.value}</p>
                   </div>
                 </a>
               ))}
