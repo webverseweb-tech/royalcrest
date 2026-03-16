@@ -1,0 +1,57 @@
+import portfolioConstructionImg from "@/assets/portfolio-construction.jpg";
+import realestateImg from "@/assets/realestate.jpg";
+import solarImg from "@/assets/solar.jpg";
+import kitchenImg from "@/assets/kitchen.jpg";
+import acImg from "@/assets/ac.jpg";
+import consultancyImg from "@/assets/consultancy.jpg";
+
+const projects = [
+  { img: portfolioConstructionImg, category: "Construction", title: "Modern Residential Complex", desc: "Contemporary multi-unit complex with glass railings and premium finishes." },
+  { img: realestateImg, category: "Real Estate", title: "Luxury Property", desc: "Breathtaking Trinidad property at night with manicured grounds." },
+  { img: solarImg, category: "Renewable Energy", title: "Rooftop Solar Installation", desc: "Residential rooftop solar providing clean energy year-round." },
+  { img: kitchenImg, category: "Property Management", title: "Premium Kitchen Renovation", desc: "Full kitchen overhaul with grey cabinetry and black granite counters." },
+  { img: acImg, category: "Air Conditioning", title: "Commercial HVAC Installation", desc: "Full HVAC system for a commercial office building in Port of Spain." },
+  { img: consultancyImg, category: "Consultancy", title: "Professional Floor Plan Design", desc: "First floor layout for a medical office complex in Port of Spain." },
+];
+
+const Portfolio = () => {
+  return (
+    <section id="portfolio" className="py-24 md:py-32 bg-secondary/30">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-16">
+          <div>
+            <div className="section-eyebrow mb-5">Portfolio</div>
+            <h2 className="section-heading mb-3">Our Work</h2>
+            <p className="section-subheading">Completed projects across our seven divisions.</p>
+          </div>
+          <a href="#contact" className="gold-button mt-6 md:mt-0 text-xs">View All ›</a>
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {projects.map((p) => (
+            <div key={p.title} className="portfolio-card">
+              <div className="relative h-64 overflow-hidden rounded-lg">
+                <img
+                  src={p.img}
+                  alt={p.title}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/30 to-transparent opacity-60 group-hover:opacity-80 transition-opacity" />
+                <div className="absolute bottom-0 left-0 right-0 p-5">
+                  <div className="flex items-center gap-2 mb-2">
+                    <span className="text-xs font-semibold text-primary tracking-wider uppercase">{p.category}</span>
+                    <span className="text-primary text-sm">→</span>
+                  </div>
+                  <h3 className="font-display text-lg font-bold text-foreground">{p.title}</h3>
+                  <p className="text-xs text-muted-foreground mt-1">{p.desc}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Portfolio;
