@@ -32,14 +32,7 @@ const About = () => {
             </p>
             <a href="#divisions" className="gold-button text-lg px-12 py-5 mb-14">View Our Divisions ›</a>
 
-            <div className="grid grid-cols-4 gap-8 mt-14 pt-12 border-t border-border">
-              {stats.map((s, i) => (
-                <AnimatedSection key={s.label} delay={i * 0.15} className="text-center">
-                  <p className="text-5xl md:text-6xl font-display font-bold text-primary">{s.value}</p>
-                  <p className="text-base tracking-wider uppercase text-muted-foreground mt-3">{s.label}</p>
-                </AnimatedSection>
-              ))}
-            </div>
+            <StatCounters />
           </AnimatedSection>
 
           <AnimatedSection delay={0.2} className="relative grid grid-cols-2 gap-6">
