@@ -1,14 +1,35 @@
 import AnimatedSection from "./AnimatedSection";
+import CountUp from "react-countup";
+import { useInView } from "framer-motion";
+import { useRef } from "react";
 import portfolioRealestateImg from "@/assets/portfolio-realestate.jpg";
 import portfolioConstructionImg from "@/assets/portfolio-construction.jpg";
 import portfolioSolarImg from "@/assets/portfolio-solar.png";
 
 const stats = [
-  { value: "7", label: "Divisions" },
-  { value: "15+", label: "Years" },
-  { value: "500+", label: "Projects" },
-  { value: "1000+", label: "Clients" },
+  { value: 7, suffix: "", label: "Divisions" },
+  { value: 15, suffix: "+", label: "Years" },
+  { value: 500, suffix: "+", label: "Projects" },
+  { value: 1000, suffix: "+", label: "Clients" },
 ];
+
+const StatCounters = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
+
+  return (
+    <div ref={ref} className="grid grid-cols-4 gap-8 mt-14 pt-12 border-t border-border">
+      {stats.map((s) => (
+        <div key={s.label} className="text-center">
+          <p className="text-5xl md:text-6xl font-display font-bold text-primary">
+            {isInView ? <CountUp end={s.value} duration={2.5} suffix={s.suffix} /> : "0"}
+          </p>
+          <p className="text-base tracking-wider uppercase text-muted-foreground mt-3">{s.label}</p>
+        </div>
+      ))}
+    </div>
+  );
+};
 
 const About = () => {
   return (
@@ -29,14 +50,7 @@ const About = () => {
             </p>
             <a href="#divisions" className="gold-button text-lg px-12 py-5 mb-14">View Our Divisions ›</a>
 
-            <div className="grid grid-cols-4 gap-8 mt-14 pt-12 border-t border-border">
-              {stats.map((s, i) => (
-                <AnimatedSection key={s.label} delay={i * 0.15} className="text-center">
-                  <p className="text-5xl md:text-6xl font-display font-bold text-primary">{s.value}</p>
-                  <p className="text-base tracking-wider uppercase text-muted-foreground mt-3">{s.label}</p>
-                </AnimatedSection>
-              ))}
-            </div>
+            <StatCounters />
           </AnimatedSection>
 
           <AnimatedSection delay={0.2} className="relative grid grid-cols-2 gap-6">
