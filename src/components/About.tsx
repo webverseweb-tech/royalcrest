@@ -13,6 +13,24 @@ const stats = [
   { value: 1000, suffix: "+", label: "Clients" },
 ];
 
+const StatCounters = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
+
+  return (
+    <div ref={ref} className="grid grid-cols-4 gap-8 mt-14 pt-12 border-t border-border">
+      {stats.map((s) => (
+        <div key={s.label} className="text-center">
+          <p className="text-5xl md:text-6xl font-display font-bold text-primary">
+            {isInView ? <CountUp end={s.value} duration={2.5} suffix={s.suffix} /> : "0"}
+          </p>
+          <p className="text-base tracking-wider uppercase text-muted-foreground mt-3">{s.label}</p>
+        </div>
+      ))}
+    </div>
+  );
+};
+
 const About = () => {
   return (
     <section id="about" className="py-32 md:py-40">
