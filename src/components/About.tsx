@@ -1,13 +1,16 @@
 import AnimatedSection from "./AnimatedSection";
+import CountUp from "react-countup";
+import { useInView } from "framer-motion";
+import { useRef } from "react";
 import portfolioRealestateImg from "@/assets/portfolio-realestate.jpg";
 import portfolioConstructionImg from "@/assets/portfolio-construction.jpg";
 import portfolioSolarImg from "@/assets/portfolio-solar.png";
 
 const stats = [
-  { value: "7", label: "Divisions" },
-  { value: "15+", label: "Years" },
-  { value: "500+", label: "Projects" },
-  { value: "1000+", label: "Clients" },
+  { value: 7, suffix: "", label: "Divisions" },
+  { value: 15, suffix: "+", label: "Years" },
+  { value: 500, suffix: "+", label: "Projects" },
+  { value: 1000, suffix: "+", label: "Clients" },
 ];
 
 const About = () => {
