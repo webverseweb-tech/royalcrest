@@ -20,7 +20,7 @@ const Footer = () => {
           <div>
             <div className="flex items-center gap-5 mb-6">
               <div className="h-16 w-16 rounded-full border-2 border-primary/30 bg-background/50 flex items-center justify-center overflow-hidden">
-                <img src={logo} alt="Royal Crest" className="h-[140%] w-[140%] object-cover object-center" />
+                <img src={logo} alt="Royal Crest" className="h-[120%] w-[120%] object-cover object-center" />
               </div>
               <div className="leading-tight">
                 <span className="block text-lg font-bold tracking-wide text-foreground">ROYAL CREST</span>
