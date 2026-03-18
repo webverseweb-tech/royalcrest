@@ -16,9 +16,9 @@ const Hero = () => {
           initial={{ scale: 0.8, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="mx-auto mb-12 h-44 w-44 md:h-56 md:w-56 rounded-full border-4 border-primary/40 bg-[hsl(222,47%,5%)] backdrop-blur-md flex items-center justify-center overflow-hidden shadow-2xl shadow-primary/15 p-5">
+          className="mx-auto mb-12 h-44 w-44 md:h-56 md:w-56 rounded-full border-4 border-primary/40 bg-[hsl(222,47%,5%)] backdrop-blur-md flex items-center justify-center overflow-hidden shadow-2xl shadow-primary/15">
           
-          <img alt="Royal Crest" className="h-full w-full object-contain" src="/lovable-uploads/bf4af194-23eb-48e9-8e56-30838b47b4e0.png" />
+          <img alt="Royal Crest" className="h-[200%] w-[200%] object-cover object-center" src={logo} />
         </motion.div>
 
         <motion.div
