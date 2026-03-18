@@ -93,7 +93,7 @@ const Divisions = () => {
                 onClick={() => setSelected(i)}
               >
                 <div className="relative h-56 overflow-hidden">
-                  <img src={d.img} alt={d.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                  <img src={d.img} alt={d.title} loading="lazy" decoding="async" width={400} height={224} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                   <div className="absolute inset-0 bg-gradient-to-t from-card via-card/50 to-transparent" />
                   <span className="absolute top-4 left-4 text-sm font-bold text-primary tracking-wider">{d.num}</span>
                 </div>
