@@ -2,9 +2,9 @@ import { motion } from "framer-motion";
 import AnimatedSection from "./AnimatedSection";
 import portfolioConstructionImg from "@/assets/portfolio-construction.jpg";
 import portfolioRealestateImg from "@/assets/portfolio-realestate.jpg";
-import portfolioSolarImg from "@/assets/portfolio-solar.png";
+import portfolioSolarImg from "@/assets/portfolio-solar.jpg";
 import portfolioKitchenImg from "@/assets/portfolio-kitchen.jpg";
-import portfolioAcImg from "@/assets/portfolio-ac.png";
+import portfolioAcImg from "@/assets/portfolio-ac.jpg";
 import portfolioConsultancyImg from "@/assets/portfolio-consultancy.jpg";
 
 const projects = [
