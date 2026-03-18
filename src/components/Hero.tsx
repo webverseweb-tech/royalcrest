@@ -18,7 +18,7 @@ const Hero = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="mx-auto mb-12 h-44 w-44 md:h-56 md:w-56 rounded-full border-4 border-primary/40 bg-background/70 backdrop-blur-md flex items-center justify-center overflow-hidden shadow-2xl shadow-primary/15"
         >
-          <img src={logo} alt="Royal Crest" className="h-[110%] w-[110%] object-cover" />
+          <img src={logo} alt="Royal Crest" className="h-[140%] w-[140%] object-cover object-center" />
         </motion.div>
 
         <motion.div
