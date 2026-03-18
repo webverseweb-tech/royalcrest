@@ -16,17 +16,17 @@ const Hero = () => {
           initial={{ scale: 0.8, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="mx-auto mb-12 h-44 w-44 md:h-56 md:w-56 rounded-full border-4 border-primary/40 bg-[hsl(222,47%,5%)] backdrop-blur-md flex items-center justify-center overflow-hidden shadow-2xl shadow-primary/15 p-5"
-        >
-          <img src={logo} alt="Royal Crest" className="h-full w-full object-contain" />
+          className="mx-auto mb-12 h-44 w-44 md:h-56 md:w-56 rounded-full border-4 border-primary/40 bg-[hsl(222,47%,5%)] backdrop-blur-md flex items-center justify-center overflow-hidden shadow-2xl shadow-primary/15 p-5">
+          
+          <img alt="Royal Crest" className="h-full w-full object-contain" src="/lovable-uploads/bf4af194-23eb-48e9-8e56-30838b47b4e0.png" />
         </motion.div>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="section-eyebrow mb-10 justify-center text-base"
-        >
+          className="section-eyebrow mb-10 justify-center text-base">
+          
           Trinidad &amp; Tobago Conglomerate
         </motion.div>
 
@@ -34,8 +34,8 @@ const Hero = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.5 }}
-          className="font-display mb-10"
-        >
+          className="font-display mb-10">
+          
           <span className="block text-6xl md:text-8xl lg:text-9xl font-light text-foreground">Royal Crest</span>
           <span className="block text-6xl md:text-8xl lg:text-9xl italic text-primary font-bold">Industries</span>
           <span className="block text-5xl md:text-6xl lg:text-7xl font-light text-foreground mt-4">Limited</span>
@@ -45,8 +45,8 @@ const Hero = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.8 }}
-          className="text-muted-foreground text-xl md:text-2xl lg:text-3xl mb-10 max-w-3xl mx-auto leading-relaxed"
-        >
+          className="text-muted-foreground text-xl md:text-2xl lg:text-3xl mb-10 max-w-3xl mx-auto leading-relaxed">
+          
           Built on Excellence, Driven by Vision
         </motion.p>
 
@@ -56,8 +56,8 @@ const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 1 }}
-          className="flex flex-col sm:flex-row gap-6 justify-center"
-        >
+          className="flex flex-col sm:flex-row gap-6 justify-center">
+          
           <a href="#divisions" className="gold-button text-lg px-14 py-5">Explore Our Divisions ›</a>
           <a href="#contact" className="ghost-button text-lg px-14 py-5">Contact Us</a>
         </motion.div>
@@ -67,8 +67,8 @@ const Hero = () => {
         <span className="text-sm tracking-[0.2em] uppercase">Scroll</span>
         <span className="animate-bounce-slow text-2xl">↓</span>
       </a>
-    </section>
-  );
+    </section>);
+
 };
 
 export default Hero;
