@@ -130,7 +130,7 @@ const Divisions = () => {
             onClick={(e) => e.stopPropagation()}
           >
             <div className="relative">
-              <img src={divisions[selected].img} alt={divisions[selected].title} className="w-full h-64 object-cover" />
+              <img src={divisions[selected].img} alt={divisions[selected].title} loading="lazy" decoding="async" width={560} height={256} className="w-full h-64 object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-card via-transparent to-transparent" />
               <button onClick={() => setSelected(null)} className="absolute top-4 right-4 bg-background/50 backdrop-blur-sm rounded-full p-2.5 text-foreground hover:text-primary transition-colors">
                 <X size={20} />
