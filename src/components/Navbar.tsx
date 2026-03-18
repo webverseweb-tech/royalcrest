@@ -24,8 +24,8 @@ const Navbar = () => {
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "bg-background/95 backdrop-blur-md shadow-lg" : "bg-transparent"}`}>
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-22 md:h-28">
         <a href="#home" className="flex items-center gap-4">
-          <div className="h-16 w-16 rounded-full border-2 border-primary/40 bg-background/50 backdrop-blur-sm flex items-center justify-center overflow-hidden transition-transform duration-300 hover:scale-110">
-            <img src={logo} alt="Royal Crest" className="h-[120%] w-[120%] object-cover object-center" />
+          <div className="h-16 w-16 rounded-full border-2 border-primary/40 bg-[hsl(222,47%,5%)] flex items-center justify-center overflow-hidden p-2.5 transition-transform duration-300 hover:scale-110">
+            <img src={logo} alt="Royal Crest" className="h-full w-full object-contain" />
           </div>
           <div className="leading-tight">
             <span className="block text-lg font-bold tracking-wide text-foreground">ROYAL CREST</span>
