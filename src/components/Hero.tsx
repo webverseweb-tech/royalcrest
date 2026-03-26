@@ -27,7 +27,7 @@ const Hero = () => {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="section-eyebrow mb-10 justify-center text-base">
           
-          Trinidad & Tobago Industrial Company
+          Trinidad & Tobago Company
         </motion.div>
 
         <motion.h1
