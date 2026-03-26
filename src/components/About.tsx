@@ -43,7 +43,7 @@ const About = () => {
               <span className="text-primary italic">Multiple Strengths.</span>
             </h2>
             <p className="text-muted-foreground text-lg md:text-xl leading-relaxed mb-6">
-              Royal Crest Industries Limited is a Trinidad &amp; Tobago conglomerate operating across seven key divisions delivering excellence through specialised teams focused on quality, sustainability, and value.
+              Royal Crest Industries Limited is a Trinidad &amp; Tobago multi-division company operating across seven key divisions delivering excellence through specialised teams focused on quality, sustainability, and value.
             </p>
             <p className="text-muted-foreground text-lg md:text-xl leading-relaxed mb-12">
               Our diverse portfolio serves both residential and commercial clients with comprehensive integrated solutions from construction and renewable energy to property management and strategic consultancy.
