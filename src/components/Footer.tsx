@@ -28,7 +28,7 @@ const Footer = () => {
               </div>
             </div>
             <p className="text-base text-muted-foreground leading-relaxed">
-              A Trinidad & Tobago conglomerate built on excellence and driven by vision across seven specialised divisions.
+              A Trinidad & Tobago company built on excellence and driven by vision across seven specialised divisions.
             </p>
           </div>
 
