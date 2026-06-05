@@ -30,8 +30,8 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    alert("Thank you for your message! We'll respond within 24 hours.");
-    setForm({ name: "", email: "", division: "", message: "" });
+    const text = `New Website Inquiry\n\nName: ${form.name}\nEmail: ${form.email}\nDivision: ${form.division}\nMessage:\n${form.message}`;
+    window.open(`https://wa.me/18682749675?text=${encodeURIComponent(text)}`, "_blank");
   };
 
   return (
